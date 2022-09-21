@@ -1,5 +1,6 @@
-const GetAll=()=>{
-    return [{
+const arrayPirates=[
+    {
+        id:1,
         name : "Levasseur",
         sex : 'm',
         firstname : "Olivier",
@@ -10,6 +11,7 @@ const GetAll=()=>{
     
     },
     {
+        id:2,
         name : "Bonny",
         sex : 'f',
         firstname : "Ann",
@@ -19,6 +21,7 @@ const GetAll=()=>{
     
     },
     {
+        id:3,
         name : "Read",
         sex : 'f',
         firstname : "Mary",
@@ -28,6 +31,7 @@ const GetAll=()=>{
     
     },
     {
+        id:4,
         name : "Teach",
         sex : 'm',
         firstname : "Edward",
@@ -37,6 +41,7 @@ const GetAll=()=>{
     
     },
     {
+        id:5,
         name : "Rackham",
         sex : 'm',
         firstname : "John",
@@ -46,6 +51,7 @@ const GetAll=()=>{
     
     },
     {
+        id:6,
         name : "Dieu-le-veut",
         sex : 'f',
         firstname : "Anne",
@@ -53,9 +59,19 @@ const GetAll=()=>{
         picture :"https://histoireparlesfemmes.files.wordpress.com/2015/05/anne-dieu-le-veut-e1442229205220.jpg",
         resume:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta repellat incidunt at laudantium blanditiis esse exercitationem, voluptate alias aspernatur dolores molestias architecto ipsa cum sequi quo eius. Illum, minima quos.",
     
-    }]
+    }
+]
+
+const GetAll=()=>{
+    return arrayPirates;
+}
+
+const GetOneById=(id)=>{
+   return arrayPirates.filter((item)=>item.id==id);
+   
 }
 
 module.exports={
     GetAll,
+    GetOneById,
 };
