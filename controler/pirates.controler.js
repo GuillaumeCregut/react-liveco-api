@@ -1,13 +1,8 @@
 const PiratesModel=require('../models/pirates.model');
 
 const PirateGetAll =()=>{
-    const array=[
-        {
-            name:"",
-            price:''
-        }
-    ]
-    return array;
+    
+    return PiratesModel.GetAll();
 }
 
 module.exports={
