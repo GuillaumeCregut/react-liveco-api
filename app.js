@@ -1,7 +1,7 @@
 const connection = require('./dbconfig');
 const express=require('express');
 const cors =require('cors');
-const router=require('./routes/index.routes');
+
 //App creation
 const app=express();
 const port=process.env.PORT||8000;
@@ -25,7 +25,7 @@ connection.connect((err)=>{
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cors(corsOptions));
-app.use('/api',router);
+
 app.get('/',(req,res)=>{
     res.send('Welcome');
 });
